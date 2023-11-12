@@ -23,14 +23,16 @@ jobs:
           distribution: 'temurin'
           server-id: github
 
+      - uses: s4u/maven-settings-action@v2.8.0
+
       - name: Test
-        run: mvn test -P github
+        run: mvn test
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build
-        run: mvn -B package --file pom.xml -P github
+        run: mvn -B package --file pom.xml
         env:
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
