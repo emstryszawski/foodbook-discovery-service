@@ -9,8 +9,8 @@
         <relativePath/>
     </parent>
 
-    <artifactId>discovery-service</artifactId>
-    <name>Discovery service</name>
+    <artifactId>foodbook-discovery-service</artifactId>
+    <name>Foodbook Discovery Service</name>
 
     <dependencies>
         <dependency>
